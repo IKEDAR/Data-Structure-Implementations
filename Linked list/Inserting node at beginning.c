@@ -1,11 +1,3 @@
-/******************************************************************************
-
-                            Online C Compiler.
-                Code, Compile, Run and Debug C program online.
-Write your code in this editor and press "Run" button to compile and execute it.
-
-*******************************************************************************/
-
 #include <stdio.h>
 #include<stdlib.h>
 struct Node{
@@ -13,8 +5,6 @@ struct Node{
     struct Node* next;
 };
 struct Node* head;//global variable 
-
-
 
 void insert(int x)
 {
@@ -36,9 +26,6 @@ void print()
     
     
 }
-
-
-
 
 int main()
 {
