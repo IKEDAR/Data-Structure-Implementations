@@ -1,12 +1,13 @@
 #include <stdio.h>
 #include<stdlib.h>
-struct Node
+struct Node /*create a data type struct Node with two fields*/
 {
-    int data;
-    struct Node* next;
+    int data;  /*Denote the data part in the node of a linked list*/
+    struct Node* next; /*Denote the address field in node*/
 };
-struct Node* top=NULL;
-void Push(int x)
+
+struct Node* top=NULL; //Top of this stack implementation is basically head node of a linked list
+void Push(int x)//Pushing data at top of stack
 {
     struct Node* temp=(struct Node*)malloc(sizeof(struct Node));
     temp->data=x;
@@ -15,7 +16,7 @@ void Push(int x)
     
     
 }
-void pop()
+void pop() //deleting data at top of stack
 {
     struct Node* temp;
     if(top==NULL) return;
@@ -23,7 +24,7 @@ void pop()
     top=top->next;
     free(temp);
 }
-void print(){
+void print(){ //printing the stack
    struct Node* temp=top;
     printf("\nThe stack is\n");
     while(temp!=NULL){
@@ -31,11 +32,11 @@ void print(){
         temp=temp -> next;
 }
 }
-void Top(){
+void Top(){ //printing the value at top of stack
     struct Node*temp=top;
     return printf("The top element is\t%d\n",temp->data);
 }
-void Isempty()
+void Isempty() //Checking if stack is empty
 {
     if(top==NULL)
     {
